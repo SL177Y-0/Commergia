@@ -7,3 +7,4 @@ All notable changes to this project will be documented in this file.
 - 2025-11-23: Create responsive Navigation and Footer components
 - 2025-11-26: Implement authentication with Shopify Customer Access Token
 - 2025-11-27: Build Product Listing Page (PLP) with dynamic filters
+- 2025-11-27: Develop Product Detail Page (PDP) with image gallery
