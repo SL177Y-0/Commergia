@@ -11,3 +11,4 @@ All notable changes to this project will be documented in this file.
 - 2025-12-02: Implement Cart functionality using React Context
 - 2025-12-05: Add Sticky Add-to-Cart mobile component
 - 2025-12-07: Integrate checkout redirect flow
+- 2025-12-08: Setup ISR revalidation strategy for product pages
