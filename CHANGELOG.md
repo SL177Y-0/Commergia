@@ -13,3 +13,4 @@ All notable changes to this project will be documented in this file.
 - 2025-12-07: Integrate checkout redirect flow
 - 2025-12-08: Setup ISR revalidation strategy for product pages
 - 2025-12-09: Implement search functionality with debouncing
+- 2025-12-10: Add Stripe payment gateway integration wrapper
