@@ -16,3 +16,4 @@ All notable changes to this project will be documented in this file.
 - 2025-12-10: Add Stripe payment gateway integration wrapper
 - 2025-12-13: Integrate Razorpay for multi-currency support
 - 2025-12-18: Add SEO Schema Markup for products and collections
+- 2025-12-19: Optimize LCP by lazy-loading below-fold images
