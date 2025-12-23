@@ -18,3 +18,4 @@ All notable changes to this project will be documented in this file.
 - 2025-12-18: Add SEO Schema Markup for products and collections
 - 2025-12-19: Optimize LCP by lazy-loading below-fold images
 - 2025-12-23: Refactor global state management to Jotai
+- 2025-12-23: Final UI polish and accessibility improvements
