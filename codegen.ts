@@ -1,9 +1,22 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
+import "dotenv/config";
+
+const schemaEndpoint =
+  process.env.NEXT_PUBLIC_SHOPIFY_STORE_API_URL ||
+  (process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN
+    ? `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-01/graphql.json`
+    : "");
+
+if (!schemaEndpoint) {
+  throw new Error(
+    "Codegen requires NEXT_PUBLIC_SHOPIFY_STORE_API_URL or NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN in environment."
+  );
+}
 
 const config: CodegenConfig = {
   schema: [
     {
-      [`${process.env.NEXT_PUBLIC_SHOPIFY_STORE_API_URL}`]: {
+      [schemaEndpoint]: {
         headers: {
           "X-Shopify-Storefront-Access-Token":
             process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN!,
@@ -22,7 +35,7 @@ const config: CodegenConfig = {
       ],
       config: {
         fetcher: {
-          endpoint: process.env.NEXT_PUBLIC_SHOPIFY_STORE_API_URL,
+          endpoint: schemaEndpoint,
           fetchParams: {
             headers: {
               "X-Shopify-Storefront-Access-Token":
