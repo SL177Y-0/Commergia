@@ -96,7 +96,7 @@ const initialCartState: CartState = {
 const cartAtom = atom<CartState>(initialCartState);
 
 // Helper function to calculate line item cost
-function calculateLineItemCost(
+export function calculateLineItemCost(
   price: number,
   quantity: number,
   currencyCode: string
@@ -108,7 +108,7 @@ function calculateLineItemCost(
 }
 
 // Helper function to calculate cart totals
-function calculateCartTotals(lines: CartState["lines"]) {
+export function calculateCartTotals(lines: CartState["lines"]) {
   // Initialize running totals for the entire cart
   let subtotal = 0;
   let totalQuantity = 0;
